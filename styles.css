@@ -1,0 +1,396 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center align vertically */
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    overflow-y: auto;
+}
+
+.login-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    flex-direction: row;
+    height: 100%;
+}
+
+.left-section, .right-section {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.left-section {
+    background-color: #eef3f7;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+}
+
+.left-section .logo-container {
+    margin-bottom: 20px;
+}
+
+.left-section .logo {
+    width: 334px;
+    height: 149px;
+    object-fit: contain;
+    margin-bottom: 0;
+}
+
+.left-section h2 {
+    margin-bottom: 40px;
+    color: #333;
+    font-size: 30px;
+    
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+    text-align: center;
+    width: calc(100% + 80px);
+    box-sizing: border-box;
+    max-width: 100%;
+    padding: 0 40px;
+}
+.terms-and-conditions {
+    width: 100%; /* Đảm bảo chiếm toàn bộ chiều rộng */
+    text-align: left; /* Căn giữa */
+    font-size: 12px; /* Điều chỉnh kích thước chữ */
+    color: #666; /* Điều chỉnh màu chữ */
+    margin: 0 0 30px 40px; /* Khoảng cách trên và dưới */
+    max-width: 400px; /* Đặt cùng độ rộng với input */
+}
+.form-group {
+    margin-bottom: 20px; /* Khoảng cách dưới */
+    width: 100%; /* Đảm bảo chiếm toàn bộ chiều rộng */
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #000;
+    text-align: left;
+    margin-left: 10px; /* Khoảng cách từ trái */
+}
+/* .left-section p {
+    margin-bottom: 20px;
+    color: #666;
+} */
+
+.input-container {
+    margin-bottom: 40px; /* Tăng khoảng cách giữa các khung */
+    position: relative;
+    /* margin-bottom: 25px; */
+    width: 100%;
+    max-width: 420px; /* Đặt chiều rộng tối đa cho khung nhập liệu */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.input-container .icon-container,
+.input-container .eye-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+.input-container .icon-container {
+    left: 10px;
+    font-size: 18px;
+}
+
+.input-container .eye-container {
+    right: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #dcdcdc;
+    color: #333;
+    
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #000;
+    text-align: left;
+    margin-left: 40px;
+    margin-bottom: 10px; /* Điều chỉnh khoảng cách dưới nhãn */
+}
+
+.button {
+    padding: 20px 84px;
+    background-color: #069B63;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.button:hover {
+    background-color: #218838;
+    text-decoration: none;  
+}
+
+.forgot-password-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: -15px;
+    margin-bottom: 15px;
+}
+
+.forgot-password {
+    display: block;
+    text-align: right;
+    color: #666;
+    text-decoration: none;
+    margin-top:-20px;
+    margin-right: 40px;
+}
+
+.forgot-password:hover {
+    text-decoration: none;
+    color: #888;
+}
+
+.error-message {
+    background-color: #f44336;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.social-login h3 {
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.social-button:hover {
+    text-decoration: none; /* Đảm bảo không có gạch chân khi hover */
+}
+
+.social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: transparent; /* Đặt nền trong suốt */
+    color: #000;
+    text-decoration: none;
+    font-size: 24px;
+    margin: 5px;
+    border: none; /* Bỏ viền */
+}
+
+.social-button i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.social-button.google-login {
+    color: #db4437;
+}
+
+.social-button img.icon {
+    width: 45px; /* Điều chỉnh kích thước theo ý bạn */
+    height: 45px;
+    vertical-align: middle; /* Căn giữa theo chiều dọc */
+}
+
+.social-button.facebook-login {
+    color: white;
+    background-color: #4267B2;
+}
+
+.social-button.linkedin-login {
+    background-color: #0077B5; /* Đặt màu nền cho LinkedIn */
+    color: white; /* Đặt màu chữ cho LinkedIn */
+    border-radius: 4px; /* Đặt bo góc cho LinkedIn */
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+}
+.line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #ccc;
+    margin: 0 10px;
+}
+
+.text {
+    padding: 0 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #ddd;
+}
+
+.divider:not(:empty)::before {
+    margin-right: .25em;
+}
+
+.divider:not(:empty)::after {
+    margin-left: .25em;
+}
+
+.divider-text {
+    padding: 0 10px;
+    color: #666;
+    font-weight: bold;
+}
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #888;
+}
+
+.illustration {
+    width: 80%;
+    max-width: 300px;
+    margin-top: 20px;
+}
+
+.right-section {
+    background-color: #55DEAA;
+    color: white;
+    padding: 40px;
+    width: 100%;
+    
+}
+
+.right-section h1 {
+    font-size: 42px;
+    margin-bottom: -15px;
+    color: #333;
+}
+
+.right-section p {
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 0;
+    color: #666;
+}
+
+.right-section .button {
+    background-color: #069B63;
+    margin-bottom: 20px;
+}
+
+.right-section .button:hover {
+    background-color: #218838;
+    text-decoration: none;
+}
+
+
+.right-section a {
+    color: white;
+    text-decoration: none;
+}
+
+.right-section .illustration {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    margin-top: 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.right-section a:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+    }
+    .tabs {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        background-color: #fff;
+        border-bottom: 1px solid #ddd;
+    }
+    .tabs a {
+        flex: 1;
+        text-align: center;
+        padding: 15px 0;
+        text-decoration: none;
+        color: #666;
+        font-weight: bold;
+        font-size: 18px;
+        max-width: 100px;
+    }
+    .tabs a.active {
+        color: #007bff;
+        border-bottom: 3px solid #007bff;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .login-container {
+        flex-direction: row;
+        
+    }
+    .tabs {
+        display: none;
+    }
+}

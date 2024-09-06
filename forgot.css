@@ -1,0 +1,295 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Đảm bảo phần tử được bắt đầu từ đầu trang */
+    height: 100vh;
+    background-color: #f0f2f5;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.login-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    flex-direction: column; /* Stack sections vertically */
+    
+}
+
+.left-section, .right-section {
+    flex: 1;
+    padding: 40px;
+}
+
+.left-section {
+    background-color: #55DEAA;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Đẩy nội dung lên trên cùng */
+    align-items: center;
+    text-align: center;
+    padding-top: 20px; /* Khoảng cách từ trên cùng */
+    padding-bottom: 20px; /* Khoảng cách từ dưới cùng */
+}
+
+.left-section h1 {
+    font-size: 36px;
+    margin-bottom: 10px; /* Giảm khoảng cách phía dưới của tiêu đề */
+    color: #000;
+}
+.main-text, .sub-text, .login-text {
+    color: #666; /* Thay đổi màu chữ thành màu đen */
+    text-align: center; /* Căn giữa chữ */
+    width: 100%; /* Đảm bảo đoạn văn chiếm toàn bộ chiều rộng của phần tử chứa */
+}
+.left-section p {
+    font-size: 23px;
+    margin-bottom: 10px;
+    color: 666;
+}
+.left-section .login-text {
+    font-size: 18px; /* Giảm cỡ chữ của dòng cuối */
+    color: #666; /* Đổi màu chữ của dòng cuối nếu cần */
+    margin-top: 30px;
+}
+.left-section .button {
+    
+    background-color: #069B63;
+    margin-top: 10px; /* Khoảng cách phía trên của nút */
+    margin-bottom: 10px; /* Thêm khoảng cách phía dưới của nút */
+    color: #FFFFFF; /* Đặt màu chữ thành trắng */
+}
+
+.left-section .button:hover {
+    background-color: #218838;
+    text-decoration: none;
+}
+
+.left-section a {
+    color: #666;
+    text-decoration: none;
+}
+
+.left-section a:hover {
+    color: #888;
+    text-decoration: none;
+}
+
+.illustration2 {
+    width: 80%;
+    max-width: 300px;
+    margin-top: 20px;
+}
+
+.right-section {
+    background-color: #eef3f7;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+}
+
+.logo-container {
+    margin-bottom: 10px;
+}
+
+.logo {
+    width: 334px; /* Chiều rộng của logo */
+    height: 149px; /* Chiều cao của logo */
+    object-fit: contain;
+    margin-bottom: 0px;
+}
+
+.right-section h2 {
+    margin-top: 0; /* Khoảng cách phía trên của tiêu đề */
+    margin-bottom: 0; /* Giảm khoảng cách phía dưới của tiêu đề */
+    color: #333;
+    font-size: 36px; /* Tăng kích thước của tiêu đề */
+    text-align: center; /* Căn giữa tiêu đề */
+    width: 100%; /* Đảm bảo tiêu đề chiếm toàn bộ chiều rộng của phần tử cha */
+}
+
+.right-section p.intro-text {
+    font-size: 18px; /* Tăng kích thước của đoạn văn ngay dưới tiêu đề */
+    margin-top: 10px; /* Khoảng cách trên của đoạn văn */
+    margin-bottom: 30px; /* Khoảng cách dưới của đoạn văn */
+    text-align: center; /* Căn giữa đoạn văn */
+    width: 100%; /* Đảm bảo đoạn văn chiếm toàn bộ chiều rộng của phần tử cha */
+    
+}
+.email-instructions p {
+    width: 100%; /* Đảm bảo chiếm toàn bộ chiều rộng */
+    text-align: left; /* Căn giữa */
+    font-size: 16px; /* Điều chỉnh kích thước chữ */
+    color: #666; /* Điều chỉnh màu chữ */
+    margin: 0 0 20px 0; /* Khoảng cách trên và dưới */
+    max-width: 400px; /* Đặt cùng độ rộng với input */
+    margin-bottom: 20px;
+}
+
+.terms-and-conditions {
+    font-size: 14px; /* Kích thước chữ */
+    color: #666; /* Màu chữ */
+    text-align: center; /* Căn giữa */
+    max-width: 400px; /* Đặt cùng độ rộng với input */
+}
+.email-instructions,
+.terms-and-conditions {
+    width: 100%; /* Đảm bảo chiếm toàn bộ chiều rộng */
+    text-align: left; /* Căn giữa */
+    font-size: 12px; /* Điều chỉnh kích thước chữ */
+    color: #666; /* Điều chỉnh màu chữ */
+    margin: 30px 0 20px 0; /* Khoảng cách trên và dưới */
+    max-width: 400px; /* Đặt cùng độ rộng với input */
+}
+
+.form-group {
+    margin-bottom: 20px; /* Khoảng cách dưới */
+    width: 100%; /* Đảm bảo chiếm toàn bộ chiều rộng */
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #000;
+    text-align: left;
+    margin-left: 10px; /* Khoảng cách từ trái */
+}
+
+
+.input-group {
+    margin: 20px 0; /* Adjust as needed */
+}
+
+.input-container {
+    margin-bottom: 40px; /* Tăng khoảng cách giữa các khung */
+    position: relative;
+    width: 100%;
+    max-width: 420px; /* Đặt chiều rộng tối đa cho khung nhập liệu */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.input-container .icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+.input-container .button-small {
+    width: 110px; /* Chiều rộng của nút gửi mã */
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #EEEDED; /* Màu nền của nút */
+    color: #333; /* Màu chữ của nút */
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0; /* Bo góc phải */
+}
+.input-container .button-small:hover{
+    text-decoration: none;
+    color: #888;
+}
+.input-container input {
+    width: 100%;
+    padding: 10px 10px 10px 40px; /* Đảm bảo đủ khoảng trống cho icon */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border-radius: 5px 0 0 5px; /* Bo góc trái */
+    background-color: #dcdcdc;
+    color: #333; /* Màu chữ */
+}
+
+.input-container input::placeholder {
+    color: #888; /* Màu chữ của placeholder */
+}
+
+.input-container:last-of-type {
+    margin-bottom: 0; /* Khoảng cách giữa nhãn "Mã khôi phục" và dòng "Việc tiếp tục..." */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #000;
+    text-align: left;
+    margin-left: 5px;
+    margin-bottom: 10px; /* Điều chỉnh khoảng cách dưới nhãn */
+}
+
+.button {
+    padding: 20px 55px;
+    background-color: #069B63;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.button:hover {
+    background-color: #218838;
+}
+
+.terms {
+    font-size: 12px;
+    margin-top: 30px; /* Điều chỉnh khoảng cách trên của dòng "Việc tiếp tục..." */
+    margin-bottom: 0; /* Đảm bảo không có khoảng cách dưới */
+    display: flex;
+    align-items: center;
+    color: #666;
+    
+}
+
+.terms input {
+    margin-right: 10px;
+}
+
+.error-message {
+    background-color: #f44336;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+a {
+    color: #000; /* Đặt màu chữ thành màu đen */
+    text-decoration: none; /* Bỏ gạch chân */
+}
+
+a:hover {
+    text-decoration: underline; /* Thêm gạch chân khi hover */
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Căn giữa button */
+}
+
+/* Responsive Design */
+@media only screen and (min-width: 768px) {
+    .login-container {
+        flex-direction: row; /* Side by side for larger screens */
+    }
+}

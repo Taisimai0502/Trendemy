@@ -1,0 +1,370 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items at the start to allow scrolling */
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.login-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    flex-direction: column; /* Stack sections vertically */
+    height: 100%;
+}
+
+.tabs {
+    display: none; /* Hidden by default */
+}
+
+/* Show tabs on mobile */
+@media (max-width: 768px) {
+    .tabs {
+        display: flex;
+        justify-content: space-around; /* Adjust alignment */
+        align-items: center;
+        width: 120%;
+        background-color: #fff;
+        border-bottom: 1px solid #ddd;
+    }
+    .tabs a {
+        flex: 1;
+        text-align: center;
+        padding: 15px 0;
+        text-decoration: none;
+        color: #666;
+        font-weight: bold;
+        font-size: 18px;
+        max-width: 150px;
+    }
+    .tabs a.active {
+        color: #007bff;
+        border-bottom: 3px solid #007bff;
+    }
+}
+
+.left-section, .right-section {
+    flex: 1;
+    padding: 40px;
+}
+
+.left-section {
+    background-color: #55DEAA;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Đẩy nội dung lên trên cùng */
+    align-items: center;
+    text-align: center;
+    padding-top: 20px; /* Khoảng cách từ trên cùng */
+    padding-bottom: 20px; /* Khoảng cách từ dưới cùng */
+}
+
+.left-section h1 {
+    font-size: 36px;
+    margin-bottom: 10px; /* Giảm khoảng cách phía dưới của tiêu đề */
+    color: #000;
+}
+
+.left-section p {
+    font-size: 23px;
+    margin-bottom: 30px; /* Giảm khoảng cách phía dưới của đoạn văn */
+}
+
+.left-section .login-text {
+    font-size: 18px; /* Giảm cỡ chữ của dòng cuối */
+    color: #666; /* Đổi màu chữ của dòng cuối nếu cần */
+}
+
+.left-section .button {
+    background-color: #069B63;
+    margin-top: 20px; /* Khoảng cách phía trên của nút */
+    margin-bottom: 10px; /* Thêm khoảng cách phía dưới của nút */
+    color: #FFFFFF; 
+    
+}
+
+.left-section .button:hover {
+    background-color: #218838;
+    text-decoration: none; /* Bỏ gạch chân */
+}
+
+.left-section a {
+    color: #666;
+    text-decoration: none;
+}
+
+.left-section a:hover {
+    text-decoration: none;
+    color: #888;
+}
+
+.left-section .illustration1 {
+    width: 100%;
+    max-width: 700px;
+    height: auto; /* Giữ tỉ lệ chiều cao tự động */
+    margin-top: 10px; /* Giảm khoảng cách phía trên của hình ảnh */
+    display: flex;
+    align-items: flex-end; /* Đặt hình ảnh ở cuối khung */
+    justify-content: center;
+}
+.main-text, .sub-text, .login-text {
+    color: #666; /* Thay đổi màu chữ thành màu đen */
+    text-align: center; /* Căn giữa chữ */
+    width: 100%; /* Đảm bảo đoạn văn chiếm toàn bộ chiều rộng của phần tử chứa */
+}
+
+
+
+.right-section {
+    background-color: #eef3f7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.logo-container {
+    margin-bottom: 10px;
+}
+
+.logo {
+
+    width: 334px; /* Chiều rộng của logo */
+    height: 130px; /* Chiều cao của logo */
+    object-fit: contain;
+    margin-bottom: 0px;
+}
+.right-section h2 {
+    margin-top: 10px; /* Khoảng cách phía trên của tiêu đề */
+    margin-bottom: 10px; /* Giữ khoảng cách phía dưới của tiêu đề */
+    color: #333;
+    font-size: 33px;    
+}
+
+p {
+    margin-bottom: 20px;
+    color: #666;
+    text-align: center; /* Căn giữa văn bản trong thẻ <p> */
+}
+
+.input-group {
+    margin: 20px 0; /* Adjust as needed */
+}
+
+.input-container {
+    margin-bottom: 20px; /* Tăng khoảng cách giữa các khung */
+    position: relative;
+    /* margin-bottom: 25px; */
+    width: 100%;
+    max-width: 420px; /* Đặt chiều rộng tối đa cho khung nhập liệu */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.input-container .icon,
+.input-container .lock-icon,
+.input-container .eye-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+.input-container .icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+.input-container .lock-icon {
+    left: 10px;
+}
+
+.input-container .eye-icon {
+    right: 10px; /* Đặt icon toggle ở bên phải */
+    cursor: pointer;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px 10px 10px 40px; /* Đảm bảo đủ khoảng trống cho icon */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border-radius: 5px 0 0 5px; /* Bo góc trái */
+    background-color: #dcdcdc;
+    color: #333; /* Màu chữ */
+}
+.input-container input::placeholder {
+    color: #888; /* Màu chữ của placeholder */
+}
+
+/* Dành cho icon con mắt */
+.input-container input[type="password"] + .eye-icon {
+    right: 10px;
+}
+
+.input-container input[type="password"] + .eye-icon:hover {
+    color: #000;
+}
+
+/* Dành cho icon ổ khóa */
+.input-container input[type="password"] {
+    padding-right: 40px; /* Đảm bảo đủ khoảng trống cho icon */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #000;
+    text-align: left;
+    margin-left: 13px;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    padding: 20px 65px;
+    background-color: #069B63;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.button:hover {
+    background-color: #218838;
+    color: #FFFFFF; /* Đảm bảo rằng màu chữ vẫn là màu trắng khi trỏ vào */
+}
+
+.forgot-password {
+    color: #007bff;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    background-color: #f44336;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.terms {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    color: #666;
+}
+
+.terms input[type="checkbox"] {
+    width: 30px; /* Điều chỉnh chiều rộng của checkbox */
+    height: 20px; /* Điều chỉnh chiều cao của checkbox */
+    margin-right: 5px; /* Khoảng cách giữa checkbox và văn bản */
+}
+.terms span {
+    font-size: 12px; /* Điều chỉnh kích thước của văn bản */
+    line-height: 1.5; /* Điều chỉnh chiều cao dòng để văn bản căn đều hơn */
+    text-align: justify; /* Căn chỉnh văn bản đều hai bên */
+    width: 100%; /* Đảm bảo chiếm toàn bộ chiều rộng */
+    text-align: left; /* Căn giữa */
+    font-size: 12px; /* Điều chỉnh kích thước chữ */
+    color: #666; /* Điều chỉnh màu chữ */
+    margin: 0 20 0 40px; /* Khoảng cách trên và dưới */
+    max-width: 400px; /* Đặt cùng độ rộng với input */
+}
+
+
+.social-login h3 {
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    background-color: white;
+    color: #000;
+    text-decoration: none;
+    font-size: 24px;
+    margin: 5px;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.illustration1 {
+    width: 80%;
+    max-width: 300px;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media only screen and (min-width: 768px) {
+    .login-container {
+        flex-direction: row; /* Default to side-by-side for larger screens */
+    }
+    .tabs {
+        display: none; /* Hide tabs on larger screens */
+    }
+}
+
+.send-code-button {
+    width: 110px; /* Chiều rộng của nút gửi mã */
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #EEEDED; /* Màu nền của nút */
+    color: #333; /* Màu chữ của nút */
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0; /* Bo góc phải */
+}
